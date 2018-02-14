@@ -145,29 +145,8 @@ namespace TechJobsConsole
             {
                 Console.WriteLine("Sorry, no results found.");
             }
-
-            
         }
     }
 }
 
 
-
-/*
- foreach (Dictionary<string, string> jobList in someJobs)
-            {
-                foreach (KeyValuePair<string, string> job in jobList)
-                {
-                    string jKey = job.Key;
-                    string jValue = job.Value;
-                    if (jValue!= null)
-                    {
-                        Console.WriteLine("FOunD SOME SHT");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Sorry, no results found.");
-                    }
-                }
-            }
-*/
