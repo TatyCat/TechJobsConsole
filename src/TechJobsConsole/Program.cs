@@ -143,7 +143,7 @@ namespace TechJobsConsole
                 Console.WriteLine("Sorry, no results found.");
             }
 
-            Console.WriteLine("p*****");
+            Console.WriteLine("*****");
         }
     }
 }
