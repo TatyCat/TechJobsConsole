@@ -123,19 +123,22 @@ namespace TechJobsConsole
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
             bool found = false;
-
-            Console.WriteLine("\n*****");
             
             //pulls dictionary item from list
             foreach (Dictionary<string, string> jobList in someJobs)
             {
+                Console.WriteLine("\n*****");
                 foreach (KeyValuePair<string, string> job in jobList)
                 {
+                    
                     string jKey = job.Key;
                     string jValue = job.Value;
                     Console.WriteLine("{0}: {1}", jKey, jValue);
+                   
                     found = true;
+                    
                 }
+                Console.WriteLine("*****" + "\n");
             }
 
             if(found==false)
@@ -143,7 +146,7 @@ namespace TechJobsConsole
                 Console.WriteLine("Sorry, no results found.");
             }
 
-            Console.WriteLine("*****");
+            
         }
     }
 }
