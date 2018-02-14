@@ -116,9 +116,55 @@ namespace TechJobsConsole
             return choiceKeys[choiceIdx];
         }
 
+        ////Search function by input, lists data if found:
+        //                                  someJobs = columnChoice, searchTerm
+        //                                               k          v
+        //                                         columnChoice, searchTerm
         private static void PrintJobs(List<Dictionary<string, string>> someJobs)
         {
-            Console.WriteLine("printJobs is not implemented yet");
+            bool found = false;
+
+            Console.WriteLine("\n*****");
+            
+            //pulls dictionary item from list
+            foreach (Dictionary<string, string> jobList in someJobs)
+            {
+                foreach (KeyValuePair<string, string> job in jobList)
+                {
+                    string jKey = job.Key;
+                    string jValue = job.Value;
+                    Console.WriteLine("{0}: {1}", jKey, jValue);
+                    found = true;
+                }
+            }
+
+            if(found==false)
+            {
+                Console.WriteLine("Sorry, no results found.");
+            }
+
+            Console.WriteLine("\n*****");
         }
     }
 }
+
+
+
+/*
+ foreach (Dictionary<string, string> jobList in someJobs)
+            {
+                foreach (KeyValuePair<string, string> job in jobList)
+                {
+                    string jKey = job.Key;
+                    string jValue = job.Value;
+                    if (jValue!= null)
+                    {
+                        Console.WriteLine("FOunD SOME SHT");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Sorry, no results found.");
+                    }
+                }
+            }
+*/
