@@ -47,10 +47,15 @@ namespace TechJobsConsole
 
             foreach (Dictionary<string, string> listRow in AllJobs)
             {
-                if (!listRow.ContainsValue(value)) 
+                //string searchInput = value.ToLower();
+                foreach(KeyValuePair<string,string> row in listRow)
                 {
-
-                    allSearch.Add(listRow);
+                    
+                    var itemIn = row.Value.ToLower();
+                    if (itemIn.Contains(value.ToLower()))
+                    {
+                        allSearch.Add(listRow);
+                    }
                 }
             }
 
