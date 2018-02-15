@@ -50,7 +50,6 @@ namespace TechJobsConsole
                 //string searchInput = value.ToLower();
                 foreach(KeyValuePair<string,string> row in listRow)
                 {
-                    
                     var itemIn = row.Value.ToLower();
                     if (itemIn.Contains(value.ToLower()))
                     {
