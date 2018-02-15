@@ -58,12 +58,13 @@ namespace TechJobsConsole
                     Console.WriteLine("\nSearch term: ");
                     string searchTerm = Console.ReadLine();
 
-                    List<Dictionary<string, string>> searchResults;
+                    List<Dictionary<string, string>>searchResults;
 
                     // Fetch results
                     if (columnChoice.Equals("all"))
                     {
-                        Console.WriteLine("Search all fields not yet implemented.");
+                        searchResults = JobData.FindByValue(columnChoice, searchTerm);
+                        PrintJobs(searchResults);
                     }
                     else
                     {
@@ -141,7 +142,7 @@ namespace TechJobsConsole
                 Console.WriteLine("*****" + "\n");
             }
 
-            if(found==false)
+            if(!found)
             {
                 Console.WriteLine("Sorry, no results found.");
             }
