@@ -54,7 +54,10 @@ namespace TechJobsConsole
                         //The header below pulls column choice key with colchoice value. 
                         //  EX..                                Skill 
                         Console.WriteLine("\n*** All " + columnChoices[columnChoice] + " Values ***");
-                         
+
+                        //Display results alphabetically with .Sort method
+                        results.Sort();
+
                         foreach (string item in results)
                         {
                             Console.WriteLine(item);
